@@ -131,7 +131,7 @@ body, div, p, ul, ol, li, dl, dt, dd, table, th, td, img, figure, h1, h2, h3, h4
 	position: relative;
 }
 
-.irstView_content {
+.firstView_content {
 	margin-bottom: 70px;
 	width: fit-content;
 }
