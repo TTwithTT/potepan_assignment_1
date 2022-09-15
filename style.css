@@ -17,15 +17,15 @@ body, div, p, ul, ol, li, dl, dt, dd, table, th, td, img, figure, h1, h2, h3, h4
 }
 
 /* header部分 */
-.Header {
+.theHeader {
 	width: 100%;
 	position:absolute
 }
 
-.Header {
-	padding-top: 10px;
+.theHeader {
+	padding-top: 20px;
 	padding-bottom: 20px;
-	display: block;
+	width: 100%;
 }
 
 .headerContainer {
@@ -48,7 +48,11 @@ body, div, p, ul, ol, li, dl, dt, dd, table, th, td, img, figure, h1, h2, h3, h4
 	}
 }
 
-.headerLog_image {
+.headerLogo {
+	align-items: center;
+}
+
+.headerLogo_image {
 	display: block;
 	height: 20px;
 	width: auto;
@@ -57,11 +61,11 @@ body, div, p, ul, ol, li, dl, dt, dd, table, th, td, img, figure, h1, h2, h3, h4
 .headerContainer>*:last-child {
 	display: inline-flex;
 }
-
 .navList {
 	align-items: center;
 	display: flex;
 	justify-content: space-between;
+	margin: 0
 }
 .navItem {
 	margin-right: 45px;
@@ -200,12 +204,68 @@ body, div, p, ul, ol, li, dl, dt, dd, table, th, td, img, figure, h1, h2, h3, h4
 
 /* about部分 */
 .aboutContainer {
+	padding: 120px 0;
+    background-color: #f79214;
+    padding: 44px 0;
+}
+
+
+.aboutWrapper {
+	padding: 120px 0;
+	background-color: #f79214;
+	padding: 44px 0;
+}
+
+.about {
 	max-width: 1140px;
-	padding-left: 50px;
-	padding-right: 50px;
-	margin-left: auto;
-	margin-right: auto;
-	position: relative;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.aboutVideo {
+	width: 50%;
+}
+
+.aboutText {
+	align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+    width: 100%;
+    align-items: flex-start;
+    margin-bottom: 0;
+    margin-left: 32px;
+}
+.aboutTitle {
+	font-family: "游ゴシック",YuGothic,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+    font-size: 38px;
+    font-weight: 900;
+    letter-spacing: .1em;
+    line-height: 54px;
+    width: 100%;
+}
+.aboutText p {
+	font-size: 16px;
+    font-weight: 1000;
+    line-height: 26px;
+    margin-bottom: 16px;
+}
+.aboutTitle, .aboutText p {
+	color: #fff;
+	text-align: left;
+}
+.aboutLink {
+	color: #fff;
+    display: flex;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
 }
 
 /* 共通部分*/
@@ -238,4 +298,8 @@ img {
 }
 section {
 	display: block;
+}
+
+video {
+	object-fit: contain;
 }
