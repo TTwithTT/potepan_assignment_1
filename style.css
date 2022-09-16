@@ -48,6 +48,88 @@ body, div, p, ul, ol, li, dl, dt, dd, table, th, td, img, figure, h1, h2, h3, h4
 	}
 }
 
+@media screen and (max-width: 1080px) {
+	.theHeader {
+		padding-top: 15px;
+		padding-bottom: 15px;
+		background-color: #fff;
+		z-index: 10;
+	}
+	.navHamburger {
+		cursor: pointer;
+		display: block!important;
+		position: relative;
+		width: 30px;
+		height: 21px;
+		z-index: 100;
+	}
+	.hamburgerLine:first-child {
+		top: 0;
+	}
+	.hamburgerLine {
+		position: absolute;
+		top: 50%;
+		display: block;
+		width: 100%;
+		height: 3px;
+		background-color: #333;
+		transform: translate(0,-50%);
+		border-radius: 10px;
+		transition: top .2s,transform .2s,opacity .3s;
+	}
+	.hamburgerLine:last-child {
+		top: 100%;
+	}
+
+	.navList {
+		overflow-y: scroll;
+		position: fixed;
+		top: 60px;
+		left: 100%;
+		width: 100%;
+		display: block;
+		padding-top: 20px;
+		padding-bottom: 75px;
+		transition: transform .5s;
+		z-index: 99;
+		background-color: rgba(0,0,0,.8);
+		height: 100%;
+	}
+	.navItem_link span:last-child {
+		font-size: 12px;
+		margin-top: 10px;
+		color: #f79214;
+		letter-spacing: 2px;
+	}
+	.isActive .hamburgerLine:first-child {
+		top: 50%;
+		transform: translate(0,-50%) rotate(45deg);
+		opacity: 1;
+	}
+	.isActive .hamburgerLine {
+		will-change: top;
+		transform: translate(20px,-50%);
+		opacity: 0
+	}
+	.isActive .hamburgerLine:last-child{
+		top: 50%;
+		transform: translate(0,-50%) rotate(-45deg);
+		opacity: 1;
+	}
+	.isActive .navList {
+		transform: translated3d(-100%,0,0);
+	}
+	.navItem {
+		margin-right: 0;
+	}
+	.navItemLink {
+		padding: 20px, 0;
+	}
+
+}
+
+
+
 .headerLogo {
 	align-items: center;
 }
@@ -61,6 +143,11 @@ body, div, p, ul, ol, li, dl, dt, dd, table, th, td, img, figure, h1, h2, h3, h4
 .headerContainer>*:last-child {
 	display: inline-flex;
 }
+
+.navHamburger{
+	display: none;
+}
+
 .navList {
 	align-items: center;
 	display: flex;
@@ -124,6 +211,50 @@ body, div, p, ul, ol, li, dl, dt, dd, table, th, td, img, figure, h1, h2, h3, h4
 	background-position: center;
 	padding-top: 100px;
 	padding-bottom: 28px;
+}
+
+@media screen and (max-width: 767px) {
+	.firstView {
+		background-image: url(images/top-hero-sp.jpg);
+		padding-top: 0;
+		padding-bottom: 35px;
+	}
+	.firstView_container {
+		padding-top: 250px;
+		max-width: none;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.firstView_content {
+		margin-bottom: 20px!important;
+		width: 100%!important;
+	}
+	.firstView_title {
+		font-size: 25px!important;
+		line-height: 36px!important;
+		margin-top: 100px;
+		margin-left: calc(((100vw - 100%)/2)*-1);
+		margin-right: calc(((100vw - 100%)/2)*-1);
+	}
+	.firstView_imageWrapper {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 30px;
+		width: 100%;
+	}
+	.firstView_imageWrapper img {
+		width: 27.5%;
+	}
+	.firstView_buttonWrapper {
+		flex-direction: column;
+	}
+	.firstView_buttonWrapper a:first-of-type {
+		margin-right: 0;
+		width: 100% !important;
+	}
+	.firstView_buttonWrapper a:last-of-type {
+		display: none;
+	}
 }
 
 .firstView_container {
@@ -266,6 +397,20 @@ body, div, p, ul, ol, li, dl, dt, dd, table, th, td, img, figure, h1, h2, h3, h4
     font-size: 18px;
     font-weight: 700;
     line-height: 26px;
+}
+
+@media screen and (max-width: 1080px) {
+	.about {
+		flex-direction: column;
+	}
+	.aboutVideo {
+		margin-bottom: 16px;
+		width:75%;
+	}
+	.aboutText {
+		margin-left: 0;
+		width: 75%;
+	}
 }
 
 /* 共通部分*/
