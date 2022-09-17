@@ -37,6 +37,7 @@ body, div, p, ul, ol, li, dl, dt, dd, table, th, td, img, figure, h1, h2, h3, h4
 }
 
 @media screen and (min-width: 768px) {
+
 	.headerLogo {
 		transition: opacity .2s;
 	}
@@ -54,6 +55,8 @@ body, div, p, ul, ol, li, dl, dt, dd, table, th, td, img, figure, h1, h2, h3, h4
 		padding-bottom: 15px;
 		background-color: #fff;
 		z-index: 10;
+		position: fixed !important;
+}
 	}
 	.navHamburger {
 		cursor: pointer;
@@ -178,6 +181,7 @@ body, div, p, ul, ol, li, dl, dt, dd, table, th, td, img, figure, h1, h2, h3, h4
 	font-weight: 700;
 	text-align: center;
 }
+
 
 .navItem_button {
 	align-items: center;
@@ -417,6 +421,10 @@ body, div, p, ul, ol, li, dl, dt, dd, table, th, td, img, figure, h1, h2, h3, h4
 a {
 	color:#333;
 	text-decoration:none;
+}
+
+a:hover {
+	opacity: 0.5;
 }
 
 p {
